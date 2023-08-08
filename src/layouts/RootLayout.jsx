@@ -5,7 +5,7 @@ import {
   useNavigation,
 } from 'react-router-dom'
 
-export const RootLayout = () => {
+export function RootLayout() {
   const { state } = useNavigation()
   const isLoading = state === 'loading'
 
