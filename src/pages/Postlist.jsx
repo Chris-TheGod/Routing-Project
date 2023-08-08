@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { Link, useLoaderData } from 'react-router-dom'
 import { getPosts } from '../api/posts'
 
@@ -10,7 +9,7 @@ const Postlist = () => {
       <h1 className='page-title'>Posts</h1>
       <div className='card-grid'>
         {posts.map((post) => (
-          <div className='card'>
+          <div key={post.id} className='card'>
             <div className='card-header'>{post.title}</div>
             <div className='card-body'>
               <div className='card-preview-text'>{post.body}</div>
